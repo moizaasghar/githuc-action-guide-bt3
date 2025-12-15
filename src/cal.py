@@ -9,4 +9,6 @@ class calculator:
         return a*b
     
     def divide(self, a,b):
+        if b == 0:
+            return "I can't divide it with zero"
         return  a/b
