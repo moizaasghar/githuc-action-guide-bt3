@@ -1,1 +1,8 @@
+name: Test on Merge/PR
+
+on:
+    pull_request:
+    branches:
+        - master
+
 
