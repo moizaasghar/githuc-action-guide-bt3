@@ -1,1 +1,27 @@
+name: Test on Merge/PR
 
+on:
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    test:
+        runs-on: ubuntu-latest # runner/system/github ka laptop
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v2
+
+            - name: Install Python
+              uses: actions/setup-python@v2
+              with:
+                python-verson: 3.11
+
+            - name: Install Req/packages
+              run: |
+                pip install pytest
+
+            - name: Run the test cases
+              run: |
+                pytest test/test.py
