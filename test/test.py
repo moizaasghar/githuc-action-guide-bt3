@@ -19,4 +19,4 @@ def test_mul(calc):
     assert calc.mul(5,3) == 15
 
 def test_divide(calc):
-    assert calc.divide(6,3) == 2
+    assert calc.divide(6,0) == "I can't divide it with zero"
